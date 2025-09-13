@@ -64,8 +64,8 @@ export default function TrackPage() {
               <h3 className="font-semibold text-blue-900 mb-3">Need Help?</h3>
               <ul className="text-sm text-blue-800 space-y-2">
                 <li>• Your order number was sent to your email after order confirmation</li>
-                <li>• Order numbers start with "ITS-" followed by alphanumeric characters</li>
-                <li>• If you can't find your order number, contact our support team</li>
+                <li>• Order numbers start with ITS- followed by alphanumeric characters</li>
+                <li>• If you cannot find your order number, contact our support team</li>
               </ul>
             </div>
           </div>

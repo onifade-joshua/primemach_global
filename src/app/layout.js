@@ -4,9 +4,10 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'IndustrialTech Solutions - Premium Industrial Equipment Supplier',
+  title: 'PrimeMach Global - Premium Industrial Equipment Supplier',
   description: 'Leading supplier of industrial and engineering equipment. We ship from USA, China to Nigeria and worldwide. Quality equipment, competitive prices, reliable service.',
   keywords: 'industrial equipment, engineering tools, machinery, Nigeria, USA, China, import, export',
+  icon: "/favicon.ico"
 }
 
 export default function RootLayout({ children }) {

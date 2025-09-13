@@ -1,11 +1,13 @@
-'use client'
-import { useState } from 'react'
-import Link from 'next/link'
-import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react'
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Phone, Mail, MapPin, ChevronDown } from "lucide-react";
+import Logo from "../../assests/primemach.jpg";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
     <>
@@ -39,18 +41,28 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-3">
               <div className="bg-primary-600 p-2 rounded-lg">
                 <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-                  <span className="font-bold text-primary-600">IT</span>
+                  {/* <span className="font-bold text-primary-600">PM</span> */}
+                  <Image
+                    src={Logo}
+                    alt="Industrial Equipment"
+                    width={800}
+                    height={400}
+                    className="w-full h-auto rounded-2xl object-cover"
+                  />
                 </div>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">IndustrialTech</h1>
-                <p className="text-sm text-gray-600">Solutions</p>
+                <h1 className="text-xl font-bold text-gray-900">PrimeMach</h1>
+                <p className="text-sm text-gray-600">Global</p>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-primary-600 font-medium">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-primary-600 font-medium"
+              >
                 Home
               </Link>
               <div className="relative">
@@ -63,28 +75,49 @@ export default function Header() {
                 </button>
                 {isServicesOpen && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
-                    <Link href="/products/industrial-machinery" className="block px-4 py-2 hover:bg-gray-50">
+                    <Link
+                      href="/products/industrial-machinery"
+                      className="block px-4 py-2 hover:bg-gray-50"
+                    >
                       Industrial Machinery
                     </Link>
-                    <Link href="/products/engineering-tools" className="block px-4 py-2 hover:bg-gray-50">
+                    <Link
+                      href="/products/engineering-tools"
+                      className="block px-4 py-2 hover:bg-gray-50"
+                    >
                       Engineering Tools
                     </Link>
-                    <Link href="/products/safety-equipment" className="block px-4 py-2 hover:bg-gray-50">
+                    <Link
+                      href="/products/safety-equipment"
+                      className="block px-4 py-2 hover:bg-gray-50"
+                    >
                       Safety Equipment
                     </Link>
-                    <Link href="/products/automation" className="block px-4 py-2 hover:bg-gray-50">
+                    <Link
+                      href="/products/automation"
+                      className="block px-4 py-2 hover:bg-gray-50"
+                    >
                       Automation Systems
                     </Link>
                   </div>
                 )}
               </div>
-              <Link href="/services" className="text-gray-700 hover:text-primary-600 font-medium">
+              <Link
+                href="/services"
+                className="text-gray-700 hover:text-primary-600 font-medium"
+              >
                 Services
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-primary-600 font-medium">
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-primary-600 font-medium"
+              >
                 About
               </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-primary-600 font-medium">
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-primary-600 font-medium"
+              >
                 Contact
               </Link>
               <Link href="/quote" className="btn-primary">
@@ -105,19 +138,34 @@ export default function Header() {
           {isMenuOpen && (
             <div className="md:hidden pb-4">
               <div className="flex flex-col space-y-4">
-                <Link href="/" className="text-gray-700 hover:text-primary-600 font-medium">
+                <Link
+                  href="/"
+                  className="text-gray-700 hover:text-primary-600 font-medium"
+                >
                   Home
                 </Link>
-                <Link href="/products" className="text-gray-700 hover:text-primary-600 font-medium">
+                <Link
+                  href="/products"
+                  className="text-gray-700 hover:text-primary-600 font-medium"
+                >
                   Products
                 </Link>
-                <Link href="/services" className="text-gray-700 hover:text-primary-600 font-medium">
+                <Link
+                  href="/services"
+                  className="text-gray-700 hover:text-primary-600 font-medium"
+                >
                   Services
                 </Link>
-                <Link href="/about" className="text-gray-700 hover:text-primary-600 font-medium">
+                <Link
+                  href="/about"
+                  className="text-gray-700 hover:text-primary-600 font-medium"
+                >
                   About
                 </Link>
-                <Link href="/contact" className="text-gray-700 hover:text-primary-600 font-medium">
+                <Link
+                  href="/contact"
+                  className="text-gray-700 hover:text-primary-600 font-medium"
+                >
                   Contact
                 </Link>
                 <Link href="/quote" className="btn-primary w-fit">
@@ -129,5 +177,5 @@ export default function Header() {
         </div>
       </header>
     </>
-  )
+  );
 }
